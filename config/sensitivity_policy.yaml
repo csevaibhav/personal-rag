@@ -1,0 +1,11 @@
+# Mirrors the tiers in the architecture blueprint doc.
+tiers:
+  public:
+    description: Institution names, generic skills, non-identifying facts.
+    default_retrievable: true
+  private:
+    description: Resume detail, employer specifics, non-ID personal history.
+    default_retrievable: true
+  strictly_confidential:
+    description: Aadhaar, PAN, passport, driving licence numbers, bank details, salary, tax filings.
+    default_retrievable: false   # only surfaced when the pre-retrieval guardrail clears the query

@@ -1,0 +1,20 @@
+# Session 0 defaults — tune these as you go.
+embedding:
+  model_name: BAAI/bge-small-en-v1.5   # local, offline (Session 2)
+  device: cpu
+
+chunking:
+  chunk_size: 500        # characters; revisit in Session 1
+  chunk_overlap: 75
+
+retrieval:
+  top_k_dense: 8
+  top_k_sparse: 8
+  rrf_k: 60               # standard RRF constant
+
+chroma:
+  persist_dir: ./data/index
+  collection_name: personal_rag
+
+claude:
+  model: claude-3-5-sonnet-latest   # check the current recommended model before Session 4
